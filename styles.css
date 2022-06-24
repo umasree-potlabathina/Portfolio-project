@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,800;1,700&family=Roboto:wght@100;300;400;700;900&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,900;1,700&display=swap');
+
+/* 
+    font-family: 'Poppins', sans-serif;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-family: 'Source Sans Pro', sans-serif;
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* scroll-margin: 8rem; */
+}
+
+body {
+    background-color: rgba(187, 60, 87, 0.8);
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+#welcome, #projects, #contact {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* || NAV-BAR || */
+
+#navbar {
+    width: 100%;
+    background-color: #613879;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.6);
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 4.5rem 0 0;
+}
+
+#navbar li {
+    list-style: none;
+}
+
+#navbar a {
+    font-size: 1.8rem;
+    color: rgb(245, 245, 245); 
+    display: block;   
+    padding: 1.5rem 1.7rem;
+}
+
+#navbar ul li a:hover {
+    background-color: rgba(151, 32, 38, 0.6);
+}
+
+
+/* || SECTION I || */
+
+#welcome {
+    background-color: black;
+    background: linear-gradient(
+        62deg,
+         #37263b 0%,
+         /* #F2D5F8 25%,
+         #E6C0E9 50%,
+         #BFABCB 75%, */
+         #200924 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome h1 {
+    color: white;
+    font-size: 3.8rem;
+    text-align: center;
+}
+
+#welcome p {
+    color: #ad2f4f;;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+
+/*  || SECTION II || */
+
+#projects {
+    scroll-margin-top: 8rem;
+}
+
+#projects h1 {
+    width: min(1000px, 80%);
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 3.5px ridge #45274b;
+    padding: 0.5rem 0.8rem;
+    margin: 5rem auto 3.2rem auto;
+    color: #45274b;
+    text-shadow: 2px 2px 3px rgba(103, 28, 146, 0.5);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.projects-grid {
+    max-width: 1600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+.project-tile {
+    width: 100%;
+    height: auto;
+    border: none;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+    /* margin-bottom: 2.5rem; */
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: rgb(50, 43, 51);
+    font-size: 1.5rem;
+    color: whitesmoke;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* For all a tags */
+a {
+    text-decoration: none;
+}
+
+.show-all {
+    width: 150px;
+    padding: 0.5rem 1rem;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+    background-color: rgb(50, 43, 51);
+    text-align: center;
+}
+
+.show-all a {
+    color: whitesmoke;
+}
+
+
+/* || SECTION III || */
+
+#contact {
+    background-color: rgb(57, 48, 68);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+#contact h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#contact p {
+  color: whitesmoke;
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-style: italic;
+  text-align: center;
+}
+
+#contact i {
+    font-size: 1.6rem;
+    color: whitesmoke;
+}
+
+#contact .contact-icon-name {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+#contact .contact-icon-name, #contact i {
+    display: inline-block;
+}
+
+#contact .icon {
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.25s;
+}
+
+.icons-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+
+#contact .icon:hover {
+    transform: translateY(8px);
+}
+
+
+/* || FOOTER || */
+
+footer {
+    padding: 2rem;
+    background-color: #ad2f4a;
+    border-top: 4px solid rgb(45, 36, 56);
+}
+
+footer p {
+    font-size: 1.1rem;
+    text-align: right;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+/* || MEDIA QUERIES || */
+
+@media screen and (min-width: 200px) and (max-width: 480px) {
+    #navbar ul {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    #navbar ul {
+        padding: 0 1rem 0 0;
+    }
+
+    #projects h1 {
+        font-size: 4rem;
+    }
+
+    figcaption {
+        padding: 1.7rem;
+    }
+
+    .projects-grid {
+        padding: 1.5rem;
+    }
+
+    #contact h1 {
+        font-size: 3rem;
+    }
+
+    #contact p {
+        font-size: 1.7rem;
+    }
+
+    #contact i {
+        font-size: 1.9rem;
+    }
+
+    #contact .contact-icon-name {
+        font-size: 1.9rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #contact h1 {
+        font-size: 4rem;
+    }
+
+    #contact p {
+        font-size: 2rem;
+    }
+
+    #contact i {
+        font-size: 2.2rem;
+    }
+
+    #contact .contact-icon-name {
+        font-size: 2.2rem;
+    }
+
+    .show-all {
+        width: 200px;
+        padding: 0.7rem 1.5rem;
+        font-size: 2rem;
+    }    
+}
+
+@media screen and (min-width: 1260px) {
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
